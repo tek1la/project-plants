@@ -183,4 +183,23 @@
   .header-bottom .menu-wraper .mobile-menu {
     display: none;
   }
+  .header-bottom .call-back-wraper {
+    width: 170px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #00730C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px, 35px, 10px, 35px;
+  }
+  .header-bottom .call-back-wraper .call-back {
+    height: 30px;
+    width: 30px;
+  }
+  .header-bottom .call-back-wraper p {
+    color: white;
+    margin-left: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */

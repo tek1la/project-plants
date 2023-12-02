@@ -180,5 +180,22 @@
                 display: none;
             }
         }
+        .call-back-wraper {
+            width: 170px;
+            height: 50px;
+            border-radius: 5px;
+            background-color: $second-color;
+            @include flex-center;
+            cursor: pointer;
+            padding: 10px, 35px, 10px, 35px;
+            .call-back {
+                height: 30px;
+                width: 30px;
+            }
+            p {
+                color: white;
+                margin-left: 10px;
+            }
+        }
     }
 }
