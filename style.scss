@@ -5,106 +5,106 @@
     font-family: 'Nunito', sans-serif!important;
 }
 
-/* Mobile */
-
-@media (min-width: 375px) {
-    /* header */
-    .header-top-wraper {
-        background-color: $main-color;
-        .header-top {
-            @include flex-space-between;
-            height: 55px;
-            margin: 0 20px;
-        }
-        .contacts {
-            height: 20px;
-            width: 100px;
-            @include flex-space-between;
-            p {
-                display: none;
-            }
-        }
-        .contact-item:first-child span{
-            content: url(img/icon/Mail.svg);
-            cursor: pointer;
-        }
-        .contact-item:nth-child(2) span{
-            content: url(img/icon/Phone-call.svg);
-            cursor: pointer;
-        }
-        .contact-item:last-child span{
-            content: url(img/icon/Location.svg);
-            cursor: pointer;
-        }
-        .lang {
-            color: white;
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 16.37px;
-            cursor: pointer;
-            span {
-                content: url(img/icon/Arrow.svg);
-                margin-left: 5px;
-                margin-bottom: 1px;
-            }
-        }
-    }
-    .header-bottom {
+/* Mobile 375px*/
+/* header */
+.header-top-wraper {
+    background-color: $main-color;
+    .header-top {
         @include flex-space-between;
-        height: 70px;
+        height: 55px;
         margin: 0 20px;
-        .logo {
-            height: 40px;
-            a {
-                content: url(img/LOGO.png);
-            }
-        }
-        .menu-wraper {
-            @include flex-space-between;
-            width: 110px;
-            height: 34px;
-            .header-menu {
-                display: none;
-            }
-            .mobile-menu {
-                cursor: pointer;
-                width: 30px;
-                height: 30px;
-                display: flex;
-                margin-left: 40px;
-                flex-direction: column;
-                justify-content: space-evenly;
-                div {
-                  height: 2px;
-                  width: 30px;
-                  border-radius: 5px;
-                  background-color: rgba(0, 115, 12, 1);
-                }
-                div:last-child {
-                  width: 18px;
-                  transition: all 0.5s;
-                }
-                &:hover div:last-child {
-                  width: 30px;
-                }
-              }
-        }
-        .call-back-wraper {
-            .call-back {
-                content: url(img/icon/Text-&-Icon.svg);
-                height: 20px;
-                width: 20px;
-            }
-            width: 40px;
-            height: 34px;
-            border-radius: 10px;
-            background-color: $second-color;
-            @include flex-center;
-            cursor: pointer;
+    }
+    .contacts {
+        height: 20px;
+        width: 100px;
+        @include flex-space-between;
+        p {
+            display: none;
         }
     }
-    /* header end */
+    .contact-item:first-child span{
+        content: url(img/icon/Mail.svg);
+        cursor: pointer;
+    }
+    .contact-item:nth-child(2) span{
+        content: url(img/icon/Phone-call.svg);
+        cursor: pointer;
+    }
+    .contact-item:last-child span{
+        content: url(img/icon/Location.svg);
+        cursor: pointer;
+    }
+    .lang {
+        color: white;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16.37px;
+        cursor: pointer;
+        span {
+            content: url(img/icon/Arrow.svg);
+            margin-left: 5px;
+            margin-bottom: 1px;
+        }
+    }
 }
+.header-bottom {
+    @include flex-space-between;
+    height: 70px;
+    margin: 0 20px;
+    .logo {
+        height: 40px;
+        a {
+            content: url(img/LOGO.png);
+        }
+    }
+    .menu-wraper {
+        @include flex-space-between;
+        width: 110px;
+        height: 34px;
+        .header-menu {
+            display: none;
+        }
+        .mobile-menu {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            margin-left: 40px;
+            flex-direction: column;
+            justify-content: space-evenly;
+            div {
+                height: 2px;
+                width: 30px;
+                border-radius: 5px;
+                background-color: rgba(0, 115, 12, 1);
+            }
+            div:last-child {
+                width: 18px;
+                transition: all 0.5s;
+            }
+            &:hover div:last-child {
+                width: 30px;
+            }
+            }
+    }
+    .call-back-wraper {
+        .call-back {
+            content: url(img/icon/Text-&-Icon.svg);
+            height: 20px;
+            width: 20px;
+        }
+        width: 40px;
+        height: 34px;
+        border-radius: 10px;
+        background-color: $second-color;
+        @include flex-center;
+        cursor: pointer;
+        p {
+            display: none;
+        }
+    }
+}
+/* header end */
 
 /* Tablet */
 
@@ -193,6 +193,7 @@
                 width: 30px;
             }
             p {
+                display: inline;
                 color: white;
                 margin-left: 10px;
             }
