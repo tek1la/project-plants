@@ -8,25 +8,31 @@
 /* Mobile */
 
 @media (min-width: 375px) {
-    .header-top {
-        @include flex-space-between;
-        height: 55px;
-        padding: 0 20px;
+    /* header */
+    .header-top-wraper {
         background-color: $main-color;
+        .header-top {
+            @include flex-space-between;
+            height: 55px;
+            margin: 0 20px;
+        }
         .contacts {
             height: 20px;
             width: 100px;
             @include flex-space-between;
+            p {
+                display: none;
+            }
         }
-        .contact-item:first-child {
+        .contact-item:first-child span{
             content: url(img/icon/Mail.svg);
             cursor: pointer;
         }
-        .contact-item:nth-child(2) {
+        .contact-item:nth-child(2) span{
             content: url(img/icon/Phone-call.svg);
             cursor: pointer;
         }
-        .contact-item:last-child {
+        .contact-item:last-child span{
             content: url(img/icon/Location.svg);
             cursor: pointer;
         }
@@ -46,17 +52,20 @@
     .header-bottom {
         @include flex-space-between;
         height: 70px;
-        padding: 0 20px;
+        margin: 0 20px;
         .logo {
+            height: 40px;
             a {
                 content: url(img/LOGO.png);
-            height: 40px;
             }
         }
         .menu-wraper {
             @include flex-space-between;
             width: 110px;
             height: 34px;
+            .header-menu {
+                display: none;
+            }
             .mobile-menu {
                 cursor: pointer;
                 width: 30px;
@@ -94,16 +103,82 @@
             cursor: pointer;
         }
     }
+    /* header end */
 }
 
 /* Tablet */
 
 @media (min-width: 768px) {
-
+    
 }
 
 /* Desktop */
 
-@media (min-width: 1024px) {
-
+@media (min-width: 1920px) {
+    /* header */
+    .header-top-wraper {
+        .header-top {
+            height: 59px;
+            margin: 0 251px;
+            .contacts {
+                width: 739px;
+                height: 25px;
+                p {
+                    display: inline;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 25px;
+                }
+            }
+            .contact-item {
+                color: white;
+                @include flex-center;
+            }
+            .contact-item span {
+                margin-right: 10px;
+            }
+        }
+    }
+    .header-bottom {
+        margin: 0 256px;
+        height: 85px;
+        .logo {
+            height: 55px;
+            content: url(img/logo-main.png)
+        }
+        .menu-wraper {
+            @include flex-space-between;
+            width: 898px;
+            .header-menu {
+                display: block;
+                ul {
+                    @include flex-space-between;
+                    width: 627px;
+                    height: 20px;
+                    li {
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 20px;
+                        color: $first-color;
+                        cursor: pointer;
+                        span {
+                            content: url(img/icon/arrow-black.svg);
+                            margin-left: 5px;
+                            margin-bottom: 1px;
+                        }
+                        &:hover {
+                            color: $second-color;
+                            span {
+                                content: url(img/icon/arrow-green.svg);
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            .mobile-menu {
+                display: none;
+            }
+        }
+    }
 }
