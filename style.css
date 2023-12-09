@@ -337,7 +337,6 @@
   .hero-wraper {
     flex-direction: row-reverse;
     align-items: normal;
-    height: 719px;
     position: relative;
   }
   .hero-wraper .mobile-hero-img {
@@ -358,6 +357,12 @@
   }
   .container .plant-bg {
     display: none;
+  }
+  .container .plant-bg-desk {
+    content: url(img/plant-desc.png);
+    position: absolute;
+    bottom: -60px;
+    left: -250px;
   }
   .container .hero-text {
     margin-top: 166px;
@@ -412,6 +417,7 @@
   .container .customer-info {
     justify-content: normal;
     gap: 10px;
+    margin-bottom: 100px;
   }
   .container .customer-info .customer-item {
     width: 149px;
