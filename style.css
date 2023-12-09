@@ -233,6 +233,9 @@
   line-height: 14px;
   color: #212529;
 }
+.container .customer-info .customer-item:last-child {
+  display: none;
+}
 .container .customer-info .customer-item span {
   margin-right: 8px;
   font-size: 12px;
@@ -429,6 +432,9 @@
     font-weight: 700;
     line-height: 20px;
     color: #212529;
+  }
+  .container .customer-info .customer-item:last-child {
+    display: flex;
   }
   .container .customer-info .customer-item span {
     display: block;

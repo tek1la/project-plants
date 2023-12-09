@@ -207,6 +207,9 @@
             font-weight: 400;
             line-height: 14px;
             color: $first-color;
+            &:last-child {
+                display: none;
+            }
             span {
                 margin-right: 8px;
                 font-size: 12px;
@@ -402,6 +405,9 @@
                 font-weight: 700;
                 line-height: 20px;
                 color: $first-color;
+                &:last-child {
+                    display: flex;
+                }
                 span {
                     display: block;
                     padding: 15px 7px 15px 7px;
