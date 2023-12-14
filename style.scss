@@ -3,6 +3,7 @@
 
 * {
     font-family: 'Nunito', sans-serif!important;
+    box-sizing: border-box;
 }
 
 /* Mobile 375px*/
@@ -198,9 +199,7 @@
         margin-bottom: 35px;
         .customer-item {
             @include flex-center;
-            width: 133px;
-            height: 32px;
-            padding: 8px, 10px, 8px, 10px;
+            padding: 8px 10px 8px 10px;
             border-radius: 32px;
             background: linear-gradient(180deg, #FFF8F1 0%, #CBE5CE 100%);
             font-size: 10px;
@@ -216,6 +215,139 @@
                 font-weight: 700;
                 line-height: 14px;
                 color: $first-color;
+            }
+        }
+    }
+}
+
+/* service section */
+    
+.service-wraper {
+    @include flex-center;
+    .content-wraper {
+        margin-top: 50px;
+    }
+    .title {
+        margin-bottom: 30px;
+        text-align: center;
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 38px;
+            margin-bottom: 15px;
+            color: $first-color;
+            span {
+                color: $second-color;
+            }
+        }
+        p {
+            text-align: center;
+            @include regular-font;
+            color: $text-color;
+        }
+    }
+    .service-block {
+        @include flex-space-between;
+        flex-direction: column;
+        height: 1068px;
+        .service-item {
+            background-image: url(img/icon/Icon.png);
+            background-repeat: no-repeat;
+            @include flex-center;
+            padding: 0 20px;
+            height: 116px;
+            border-radius: 10px;
+            box-shadow: 2px 11px 30px 0px #33333314;
+            .item-icon {
+                margin-right: 20px;
+            }
+            &:hover {
+                background-color: $second-color;
+                .item-text {
+                    h4 {
+                        color: white;
+                    }
+                    p {
+                        color: white;
+                    }
+                }
+            }
+            &:first-child .item-icon{
+                content: url(img/icon/Tree-Planting.svg);
+            }
+            &:hover:first-child{
+                .item-icon{
+                    content: url(img/icon/Tree-Planting-hover.svg);
+                }
+            }
+            &:last-child .item-icon{
+                content: url(img/icon/Watering-&-Irrigation.svg);
+            }
+            &:hover:last-child{
+                .item-icon{
+                    content: url(img/icon/Watering-&-Irrigation-hover.svg);
+                }
+            }
+            &:nth-child(2) .item-icon{
+                content: url(img/icon/Grass-Cutting.svg);
+            }
+            &:hover:nth-child(2){
+                .item-icon{
+                    content: url(img/icon/Grass-Cutting-hover.svg);
+                }
+            }
+            &:nth-child(3) .item-icon{
+                content: url(img/icon/Garden-Design.svg);
+            }
+            &:hover:nth-child(3){
+                .item-icon{
+                    content: url(img/icon/Garden-Design-hover.svg);
+                }
+            }
+            &:nth-child(4) .item-icon{
+                content: url(img/icon/Plant-Growing.svg);
+            }
+            &:hover:nth-child(4){
+                .item-icon{
+                    content: url(img/icon/Plant-Growing-hover.svg);
+                }
+            }
+            &:nth-child(5) .item-icon{
+                content: url(img/icon/Flower-Scaping.svg);
+            }
+            &:hover:nth-child(5){
+                .item-icon{
+                    content: url(img/icon/Flower-Scaping-hover.svg);
+                }
+            }
+            &:nth-child(6) .item-icon{
+                content: url(img/icon/Branch-cutting.svg);
+            }
+            &:hover:nth-child(6){
+                .item-icon{
+                    content: url(img/icon/Branch-cutting-hover.svg);
+                }
+            }
+            &:nth-child(7) .item-icon{
+                content: url(img/icon/Pests-Weeds-Control.svg);
+            }
+            &:hover:nth-child(7){
+                .item-icon{
+                    content: url(img/icon/Pests-Weeds-Control-hover.svg);
+                }
+            }
+            .item-text {
+                h4 {
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 21px;
+                    color: $first-color;
+                    margin-bottom: 10px;
+                }
+                p {
+                    @include regular-font;
+                    color: $text-color;
+                }
             }
         }
     }
@@ -320,6 +452,7 @@
         flex-direction: row-reverse;
         align-items: normal;
         position: relative;
+        height: 719px;
         .mobile-hero-img {
             img {
                 display: none;
@@ -420,4 +553,70 @@
             }
         }
     }
+
+    /* service section */
+    
+.service-wraper {
+    .content-wraper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 100px;
+        width: 100%;
+    }
+    .title {
+        max-width: 1136px;
+        margin-bottom: 50px;
+        text-align: center;
+        h2 {
+            font-size: 45px;
+            font-weight: 800;
+            line-height: 61px;
+            margin-bottom: 30px;
+        }
+        p {
+            @include regular-font-desc;
+        }
+    }
+    .service-block {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 1410px;
+        height: 100%;
+        gap: 30px;
+        margin-bottom: 100px;
+        .service-item {
+            @include flex-space-between;
+            background-image: url(img/icon/icon-desc.png);
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: 25.68px; 
+            flex-direction: column;
+            padding: 59.5px 43px;
+            width: calc(25% - 22.5px);
+            height: 366px;
+            .item-icon {
+                margin-right: 0;
+                width: 70px;
+            }
+            .item-text {
+                @include flex-center;
+                flex-direction: column;
+                h4 {
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 32px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+    
 }
