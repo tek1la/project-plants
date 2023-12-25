@@ -459,6 +459,103 @@
     }
 }
 
+/* comment section */
+
+.comment-wraper {
+    @include flex-center;
+    align-items: normal;
+    height: 687px;
+    .bg {
+        @include flex-center;
+        align-items: normal;
+        height: 585px;
+        width: 100%;
+        background: #E6F6EA;
+        box-shadow: 77.4000015258789px -77.4000015258789px 77.4000015258789px 0px #AFBBB219 inset;
+    }
+    .container {
+        .content-wraper {
+            position: relative;
+        }
+        .slider-wraper {
+            width: 100%;
+        }
+        .title {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 40px;
+            h2 {
+                margin-bottom: 15px;
+                font-size: 28px;
+                font-weight: 700;
+                line-height: 38px;
+                span {
+                    color: $second-color;
+                }
+            }
+            p {
+                @include regular-font;
+                color: $text-color;
+            }
+        }
+        .slider {
+            .slick-track {
+                display: flex;
+                gap: 30px;
+            }
+            .slick-slide {
+                height: 431px;
+                padding: 20px;
+                background-color: white;
+                box-shadow: 2px 11px 30px 0px #33333314;
+            }
+            img {
+                margin-bottom: 30px;
+            }
+            .slick-arrow {
+                display: none!important;
+            }
+            .comment {
+                img {
+                    width: 135px;
+                    height: 183px;
+                }
+                .text {
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                    @include regular-font;
+                    color: $text-color;
+                }
+                .name-and-rate{
+                    @include flex-space-between;
+                    .name {
+                        p:first-child {
+                            font-size: 16px;
+                            font-weight: 700;
+                            line-height: 21px;
+                            color: $first-color;
+                        }
+                        p:last-child {
+                            font-size: 12px;
+                            font-weight: 400;
+                            line-height: 16px;
+                            color: $text-color;
+                        }
+                    }
+                }
+                .rate {
+                    margin-right: 15px;
+                    @include flex-space-between;
+                    gap: 10px;
+                    .star {
+                    content: url(img/icon/star.svg);
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* Tablet */
 
 @media (min-width: 768px) {
@@ -630,6 +727,15 @@
             }
             .cards-wraper {
                 width: 100%;
+            }
+        }
+    }
+
+    // comment selection
+
+    .comment-wraper {
+        .container {
+            .slider {
             }
         }
     }
@@ -982,7 +1088,125 @@
             }
         }
     }
-    
+    // comment selection
+
+    .comment-wraper {
+        .container {
+            .content-wraper {
+                width: 100%;
+            }
+            .title {
+                text-align: start;
+                margin-top: 100px;
+                margin-bottom: 50px;
+                width: 956px;
+                h2 {
+                    margin-bottom: 30px;
+                    font-size: 45px;
+                    font-weight: 800;
+                    line-height: 61px;
+                    span {
+                        color: $second-color;
+                    }
+                }
+                p {
+                    @include regular-font-desc;
+                    color: $text-color;
+                }
+            }
+            .slider {
+                .slick-track {
+                    display: flex;
+                    gap: 30px;
+                }
+                .slick-slide {
+                    height: 341px;
+                    width: 690px;
+                    padding: 20px;
+                    background-color: white;
+                    box-shadow: 2px 11px 30px 0px #33333314;
+                }
+                img {
+                    margin-bottom: 30px;
+                }
+                .slick-arrow {
+                    display: block!important;
+                    width: 50px;
+                    height: 50px;
+                    border: 1px solid $second-color;
+                    border-radius: 5px;
+                    
+                }
+                .slick-prev {
+                    top: -70px;
+                    left: 1260px;
+                    &:hover {
+                        background-color: $second-color;
+                    }
+                }
+                .slick-prev:before {
+                    content: url(img/icon/arrow-prev.svg);
+                }
+                .slick-prev:hover:before {
+                    content: url(img/icon/arrow-prev-hover.svg)!important;
+                }
+                .slick-next {
+                    top: -70px;
+                    left: 1340px;
+                    &:hover {
+                        background-color: $second-color;
+                    }
+                }
+                .slick-next:before {
+                    content: url(img/icon/arrow-next.svg);
+                }
+                .slick-next:hover:before {
+                    content: url(img/icon/arrow-next-hover.svg);
+                    
+                }
+                .comment {
+                    @include flex-center;
+                    img {
+                        width: 193px;
+                        height: 276px;
+                    }
+                    .text {
+                        margin-bottom: 27px;
+                        @include regular-font-desc;
+                        width: 409px;
+                        color: $text-color;
+                    }
+                    .name-and-rate{
+                        @include flex-space-between;
+                        .name {
+                            p:first-child {
+                                font-size: 24px;
+                                font-weight: 700;
+                                line-height: 32px;
+                                color: $first-color;
+                            }
+                            p:last-child {
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 25px;
+                                color: $text-color;
+                            }
+                        }
+                    }
+                    .rate {
+                        margin-right: 15px;
+                        @include flex-space-between;
+                        gap: 10px;
+                        .star {
+                        content: url(img/icon/star.svg);
+                        width: 25px;
+                        height: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* Desktop */
