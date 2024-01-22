@@ -27,3 +27,18 @@ $(document).ready(function () {
     ],
   });
 });
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
+});
