@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+button {
+  cursor: pointer;
+}
+
 /* Mobile 375px*/
 /* header */
 .header-top-wraper {
@@ -571,6 +575,7 @@
   width: 167px;
   height: 40px;
   color: white;
+  border-radius: 5px;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -738,6 +743,142 @@
   width: 20px;
   height: 20px;
   margin-right: 10px;
+}
+
+/* staff section */
+.staff-wraper .container .content-wraper .title-wraper .title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.staff-wraper .container .content-wraper .title-wraper .title h2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 38px;
+  margin-bottom: 15px;
+}
+.staff-wraper .container .content-wraper .title-wraper .title h2 span {
+  color: #00730C;
+}
+.staff-wraper .container .content-wraper .title-wraper .title p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.staff-wraper .container .content-wraper .title-wraper button {
+  display: block;
+  margin: auto;
+  border: none;
+  background-color: #00730C;
+  width: 167px;
+  height: 40px;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.staff-wraper .container .slider-staff-wraper {
+  margin-top: 40px;
+  margin-bottom: 66px;
+  width: 100%;
+}
+.staff-wraper .container .slider-staff-wraper .slider-staff .staff {
+  position: relative;
+  width: 345px;
+  height: 343px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+.staff-wraper .container .slider-staff-wraper .slider-staff .staff .info {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background: linear-gradient(6.68deg, #00730C 4.95%, rgba(251, 246, 238, 0) 264.79%);
+  border-radius: 5px;
+  bottom: 0;
+}
+.staff-wraper .container .slider-staff-wraper .slider-staff .staff .info .title {
+  text-align: center;
+  margin: 7px 0;
+  color: white;
+}
+.staff-wraper .container .slider-staff-wraper .slider-staff .staff .info .title h5 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.staff-wraper .container .slider-staff-wraper .slider-staff .staff .info .title p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.staff-wraper .container .slider-staff-wraper .slider-staff .staff .info .social {
+  gap: 25px;
+  margin-top: 20px;
+  display: none;
+}
+.staff-wraper .container .slider-staff-wraper .slider-staff .staff .info .social .google {
+  content: url(img/icon/Google-staff.svg);
+  cursor: pointer;
+}
+.staff-wraper .container .slider-staff-wraper .slider-staff .staff .info .social .facebook {
+  content: url(img/icon/facebook-staff.svg);
+  cursor: pointer;
+}
+.staff-wraper .container .slider-staff-wraper .slider-staff .staff .info .social .twiter {
+  content: url(img/icon/twitter-staff.svg);
+  cursor: pointer;
+}
+.staff-wraper .container .slider-staff-wraper .slider-staff .staff .info .social .pinterest {
+  content: url(img/icon/pinterest-staff.svg);
+  cursor: pointer;
+}
+.staff-wraper .container .slider-staff-wraper .slider-staff .staff .info .social .linkedin {
+  content: url(img/icon/linkedin-staff.svg);
+  cursor: pointer;
+}
+.staff-wraper .container .slider-staff-wraper .slider-staff .staff .info:hover {
+  animation: 0.2s linear forwards move_up;
+}
+.staff-wraper .container .slider-staff-wraper .slider-staff .staff .info:hover .social {
+  display: flex;
+}
+@keyframes move_up {
+  from {
+    height: 62px;
+  }
+  to {
+    height: 100%;
+  }
+}
+.staff-wraper .container .slider-staff-wraper .slick-dots {
+  height: 6px;
+  bottom: 0;
+}
+.staff-wraper .container .slider-staff-wraper .slick-dots .slick-active {
+  width: 50px;
+}
+.staff-wraper .container .slider-staff-wraper .slick-dots .slick-active button::before {
+  width: 50px;
+}
+.staff-wraper .container .slider-staff-wraper .slick-dots li {
+  height: 6px;
+}
+.staff-wraper .container .slider-staff-wraper .slick-dots li button {
+  height: 6px;
+  padding: 0;
+}
+.staff-wraper .container .slider-staff-wraper .slick-dots li button::before {
+  height: 6px;
+  content: "";
+  background-color: #00730C;
+  border-radius: 8px;
+  opacity: 1;
 }
 
 /* comment section */
@@ -1507,6 +1648,22 @@
     height: 20px;
     margin-right: 10px;
   }
+  /* staff section */
+  .staff-wraper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .staff-wraper .container .content-wraper {
+    position: relative;
+  }
+  .staff-wraper .container .slider-staff-wraper .slider-staff .staff {
+    width: 100%;
+  }
+  .staff-wraper .container .slider-staff-wraper .slider-staff .slick-track {
+    display: flex;
+    gap: 30px;
+  }
   .comment-wraper .container .slider .slick-track {
     display: flex;
     gap: 30px;
@@ -1983,6 +2140,7 @@
   .choose-wraper .container .bg-leaf-right {
     top: 0;
   }
+  /* working section */
   .working-wraper {
     margin-bottom: 100px;
   }
@@ -2068,6 +2226,63 @@
   .working-wraper .container .content-wraper .cta-wraper button span {
     width: 30px;
     height: 30px;
+  }
+  /* staff section */
+  .staff-wraper .container .content-wraper {
+    width: 100%;
+  }
+  .staff-wraper .container .content-wraper .title-wraper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: flex-end;
+  }
+  .staff-wraper .container .content-wraper .title-wraper .title {
+    margin-bottom: 30px;
+    text-align: start;
+    width: 956px;
+  }
+  .staff-wraper .container .content-wraper .title-wraper .title h2 {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 61px;
+    margin-bottom: 30px;
+  }
+  .staff-wraper .container .content-wraper .title-wraper .title p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  .staff-wraper .container .content-wraper .title-wraper button {
+    margin: 0;
+    width: 190px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .staff-wraper .container .slider-staff-wraper {
+    margin-top: 50px;
+    margin-bottom: 66px;
+  }
+  .staff-wraper .container .slider-staff-wraper .slider-staff .staff {
+    height: 408px;
+    margin-bottom: 33px;
+    border-radius: 10px;
+  }
+  .staff-wraper .container .slider-staff-wraper .slider-staff .staff .info {
+    border-radius: 10px;
+  }
+  .staff-wraper .container .slider-staff-wraper .slider-staff .staff .info .title {
+    margin: 13px 0;
+  }
+  .staff-wraper .container .slider-staff-wraper .slider-staff .staff .info .title h5 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .staff-wraper .container .slider-staff-wraper .slider-staff .staff .info .title p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
   }
   .comment-wraper .container .content-wraper {
     width: 100%;

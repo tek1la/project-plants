@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+button {
+    cursor: pointer;
+}
+
 /* Mobile 375px*/
 /* header */
 .header-top-wraper {
@@ -545,6 +549,7 @@
             width: 167px;
             height: 40px;
             color: white;
+            border-radius: 5px;
             font-size: 16px;
             font-weight: 700;
             line-height: 20px;
@@ -722,6 +727,151 @@
                         width: 20px;
                         height: 20px;
                         margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* staff section */
+
+.staff-wraper {
+    .container {
+        .content-wraper {
+            .title-wraper {
+                .title {
+                    margin-bottom: 30px;
+                    text-align: center;
+                    h2 {
+                        font-size: 28px;
+                        font-weight: 700;
+                        line-height: 38px;
+                        margin-bottom: 15px;
+                        span {
+                            color: $second-color
+                        }
+                    }
+                    p {
+                        @include regular-font;
+                    }
+                }
+                button {
+                    display: block;
+                    margin: auto;
+                    border: none;
+                    background-color: $second-color;
+                    width: 167px;
+                    height: 40px;
+                    color: white;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 20px;
+                }
+            }
+        }
+        .slider-staff-wraper {
+            margin-top: 40px;
+            margin-bottom: 66px;
+            width: 100%;
+            .slider-staff {
+                .staff {
+                    position: relative;
+                    width: 345px;
+                    height: 343px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    margin-bottom: 30px;
+                    border-radius: 5px;
+                    .info {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        width: 100%;
+                        background: linear-gradient(6.68deg, #00730C 4.95%, rgba(251, 246, 238, 0) 264.79%);
+                        border-radius: 5px;
+                        bottom: 0;
+                        .title {
+                            text-align: center;
+                            margin: 7px 0;
+                            color: white;
+                            h5 {
+                                font-size: 18px;
+                                font-weight: 700;
+                                line-height: 24px;
+                            }
+                            p {
+                                @include regular-font;
+                            }
+                        }
+                        .social {
+                            gap: 25px;
+                            margin-top: 20px;
+                            display: none;
+                            .google {
+                                content: url(img/icon/Google-staff.svg);
+                                cursor: pointer;
+                            }
+                            .facebook {
+                                content: url(img/icon/facebook-staff.svg);
+                                cursor: pointer;
+                            }
+                            .twiter {
+                                content: url(img/icon/twitter-staff.svg);
+                                cursor: pointer;
+                            }
+                            .pinterest {
+                                content: url(img/icon/pinterest-staff.svg);
+                                cursor: pointer;
+                            }
+                            .linkedin {
+                                content: url(img/icon/linkedin-staff.svg);
+                                cursor: pointer;
+                            }
+                        }
+                        &:hover {
+                            .social {
+                                display: flex;
+                            }
+                            animation: 0.2s linear forwards move_up;
+                        }
+                        @keyframes move_up {
+                            from {
+                              height: 62px;
+                            }
+                            to {
+                              height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .slick-dots {
+                height: 6px;
+                bottom: 0;
+                .slick-active {
+                    width: 50px;
+                    button {
+                        &::before {
+                            width: 50px;
+                        }
+                    }
+                }
+                li {
+                    height: 6px;
+                    button {
+                        height: 6px;
+                        padding: 0;
+                        &::before {
+                            height: 6px;
+                            content: "";
+                            background-color: $second-color;
+                            border-radius: 8px;
+                            opacity: 1;
+                        }
                     }
                 }
             }
@@ -1493,6 +1643,28 @@
         }
     }
 
+    /* staff section */
+
+.staff-wraper {
+    @include flex-center;
+    .container {
+        .content-wraper {
+            position: relative;
+        }
+        .slider-staff-wraper {
+            .slider-staff {
+                .staff {
+                    width: 100%;
+                }
+                .slick-track {
+                    display: flex;
+                    gap: 30px;
+                }
+            }
+        }
+    }
+}
+
     // comment section
 
     .comment-wraper {
@@ -1991,6 +2163,8 @@
         }
     }
 
+    /* working section */
+
     .working-wraper {
         margin-bottom: 100px;
         .container {
@@ -2075,6 +2249,65 @@
             }
         }
     }
+
+    /* staff section */
+
+.staff-wraper {
+    .container {
+        .content-wraper {
+            width: 100%;
+            .title-wraper {
+                @include flex-space-between;
+                align-items: flex-end;
+                .title {
+                    margin-bottom: 30px;
+                    text-align: start;
+                    width: 956px;
+                    h2 {
+                        font-size: 45px;
+                        font-weight: 800;
+                        line-height: 61px;
+                        margin-bottom: 30px;
+                    }
+                    p {
+                        @include regular-font-desc;
+                    }
+                }
+                button {
+                    margin: 0;
+                    width: 190px;
+                    height: 50px;
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+        }
+        .slider-staff-wraper {
+            margin-top: 50px;
+            margin-bottom: 66px;
+            .slider-staff {
+                .staff {
+                    height: 408px;
+                    margin-bottom: 33px;
+                    border-radius: 10px;
+                    .info {
+                        border-radius: 10px;
+                        .title {
+                            margin: 13px 0;
+                            h5 {
+                                font-size: 24px;
+                                line-height: 32px;
+                            }
+                            p {
+                                @include regular-font-desc;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
     // comment selection
 

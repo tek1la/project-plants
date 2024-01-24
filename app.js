@@ -28,6 +28,44 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  $(".slider-staff").slick({
+    speed: 300,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 2561,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          dots: false,
+        },
+      },
+    ],
+  });
+});
+
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 10,
