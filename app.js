@@ -80,3 +80,15 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
+
+const questionBtns = document.querySelectorAll(".question");
+const hidenText = document.querySelectorAll(".hiden-text");
+const plusBtns = document.querySelectorAll(".plus");
+
+questionBtns.forEach((item, index) => {
+  item.addEventListener("click", function () {
+    hidenText[index].classList.toggle("hiden");
+    plusBtns[index].classList.toggle("hiden");
+    item.classList.toggle("question-active");
+  });
+});
